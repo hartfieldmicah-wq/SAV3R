@@ -1,0 +1,19 @@
+{
+  "name": "SAV3R",
+  "short_name": "SAV3R",
+  "description": "A soft, playful budgeting app with savings goals and automatic paycheck splits.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f2fbf6",
+  "theme_color": "#2fc48d",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='14' fill='%232fc48d'/%3E%3Ccircle cx='24' cy='25' r='13' fill='%23ffffff'/%3E%3Cpath d='M28 20c-1-1.4-2.4-2-4.1-2-2.3 0-3.9 1.2-3.9 3 0 4.4 8 2.1 8 6.4 0 1.8-1.8 3.1-4.2 3.1-1.9 0-3.5-.8-4.5-2.2M24 15v3M24 31.5v3' fill='none' stroke='%231ea574' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

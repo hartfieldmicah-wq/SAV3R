@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>SAV3R</title>
-<meta name="description" content="SAV3R - a soft, playful budgeting app with savings goals and automatic paycheck splits.">
+<meta name="description" content="SAV3R - a soft, playful budgeting app that splits each paycheck into your percent buckets.">
 <meta name="theme-color" content="#f2fbf6">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
@@ -17,7 +17,7 @@
 /* Set the theme before first paint so there is no flash. */
 (function () {
   try {
-    var d = JSON.parse(localStorage.getItem('sav3r.v1') || '{}');
+    var d = JSON.parse(localStorage.getItem('sav3r.v2') || localStorage.getItem('sav3r.v1') || '{}');
     var t = d.settings && d.settings.theme;
     if (t !== 'dark' && t !== 'light') {
       t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
@@ -67,6 +67,7 @@
     <symbol id="i-cap" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5"/></g></symbol>
     <symbol id="i-star" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.8 6.3.8-4.6 4.3 1.2 6.3L12 17.1 6.4 20.2l1.2-6.3L3 9.6l6.3-.8z"/></g></symbol>
     <symbol id="i-sparkle" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c.6 4.5 2.5 6.4 7 7-4.5.6-6.4 2.5-7 7-.6-4.5-2.5-6.4-7-7 4.5-.6 6.4-2.5 7-7z"/><path d="M19 17v4M17 19h4"/></g></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9"/></g></symbol>
     <symbol id="i-leaf" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15"/><path d="M5 19c3-5 6-8 10-10"/></g></symbol>
   </defs>
 </svg>
@@ -93,17 +94,14 @@
 
 <nav class="nav" aria-label="Main">
   <div class="nav-inner">
-    <button type="button" data-action="nav" data-view="home" aria-label="Home">
-      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-home" xlink:href="#i-home"></use></svg><span>Home</span>
+    <button type="button" data-action="nav" data-view="split" aria-label="Split">
+      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-percent" xlink:href="#i-percent"></use></svg><span>Split</span>
     </button>
-    <button type="button" data-action="nav" data-view="goals" aria-label="Goals">
-      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-target" xlink:href="#i-target"></use></svg><span>Goals</span>
+    <button type="button" data-action="nav" data-view="buckets" aria-label="Buckets">
+      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wallet" xlink:href="#i-wallet"></use></svg><span>Buckets</span>
     </button>
-    <button type="button" data-action="nav" data-view="accounts" aria-label="Accounts">
-      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wallet" xlink:href="#i-wallet"></use></svg><span>Accounts</span>
-    </button>
-    <button type="button" data-action="nav" data-view="pay" aria-label="Paychecks">
-      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-coins" xlink:href="#i-coins"></use></svg><span>Paychecks</span>
+    <button type="button" data-action="nav" data-view="history" aria-label="History">
+      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-calendar" xlink:href="#i-calendar"></use></svg><span>History</span>
     </button>
     <button type="button" data-action="nav" data-view="settings" aria-label="Settings">
       <svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-sliders" xlink:href="#i-sliders"></use></svg><span>Settings</span>

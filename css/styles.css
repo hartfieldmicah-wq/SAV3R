@@ -681,3 +681,111 @@ button {
   .hero .big { font-size: 34px; }
   .nav button { font-size: 10px; }
 }
+
+/* ============================================================
+   v2 additions - splitter, buckets
+   ============================================================ */
+.btn-row.center { justify-content: center; }
+
+.amount-card { padding: 18px; }
+.money-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid var(--line);
+  background: var(--surface2);
+  border-radius: 20px;
+  padding: 4px 16px;
+}
+.money-input:focus-within { border-color: var(--green); }
+.money-input b { font-size: 30px; font-weight: 900; color: var(--accent-text); }
+.money-input input {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  min-height: 60px;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 32px; /* 16px+ stops iPhone zoom-on-focus */
+  font-weight: 900;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.money-input input::placeholder { color: var(--muted); opacity: 0.5; }
+
+.results { margin-top: 14px; }
+.hint { display: flex; align-items: center; gap: 12px; color: var(--muted); }
+.warn-card { background: var(--warn-soft); border-color: transparent; color: var(--text); }
+.warn-card .title { color: var(--warn); font-weight: 800; }
+
+.stack-bar {
+  display: flex;
+  height: 16px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--green-soft);
+  margin: 4px 0 10px;
+}
+.stack-bar i { display: block; height: 100%; min-width: 0; }
+.stack-bar.over { outline: 2px solid var(--danger); }
+
+.split-list2 { margin-top: 4px; }
+.split-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.split-row .grow { flex: 1; min-width: 0; }
+.split-row .title { font-weight: 800; overflow-wrap: anywhere; }
+.split-row .sub { font-size: 13px; color: var(--muted); }
+.split-row.unassigned { opacity: 0.85; }
+.amt-col { text-align: right; flex: 0 0 auto; }
+.big-amt { font-size: 20px; display: block; }
+.amt-col .chip { display: inline-block; margin-top: 2px; }
+.chip.warn { background: var(--warn-soft); color: var(--warn); }
+.dot { width: 10px; height: 10px; border-radius: 50%; flex: 0 0 auto; }
+.dot.hollow { background: transparent; border: 2px dashed var(--muted); }
+.badge.sm { width: 38px; height: 38px; border-radius: 13px; }
+
+.split-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 12px;
+  font-weight: 800;
+}
+.split-total b { font-size: 20px; color: var(--accent-text); }
+
+.ok-text { color: var(--accent-text); font-weight: 800; }
+.hint-line { margin: -6px 0 14px; font-size: 13px; color: var(--muted); font-weight: 700; }
+
+details.more {
+  background: var(--surface2);
+  border: 1px dashed var(--line);
+  border-radius: 18px;
+  padding: 12px 14px 2px;
+  margin-bottom: 14px;
+}
+details.more summary {
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--accent-text);
+  min-height: 28px;
+  padding-bottom: 10px;
+}
+.row .dot { margin-right: -2px; }
+
+/* keeps the big paycheck box from inheriting the normal text-field look */
+.field .money-input input[type="text"] {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  min-height: 60px;
+  font-size: 32px;
+}

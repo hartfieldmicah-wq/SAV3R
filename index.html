@@ -11,8 +11,13 @@
 <meta name="apple-mobile-web-app-title" content="SAV3R">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="manifest" href="manifest.json">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='14' fill='%232fc48d'/%3E%3Ccircle cx='24' cy='25' r='13' fill='%23ffffff'/%3E%3Cpath d='M28 20c-1-1.4-2.4-2-4.1-2-2.3 0-3.9 1.2-3.9 3 0 4.4 8 2.1 8 6.4 0 1.8-1.8 3.1-4.2 3.1-1.9 0-3.5-.8-4.5-2.2M24 15v3M24 31.5v3' fill='none' stroke='%231ea574' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
-<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%232fc48d'/%3E%3Ccircle cx='24' cy='25' r='13' fill='%23ffffff'/%3E%3Cpath d='M28 20c-1-1.4-2.4-2-4.1-2-2.3 0-3.9 1.2-3.9 3 0 4.4 8 2.1 8 6.4 0 1.8-1.8 3.1-4.2 3.1-1.9 0-3.5-.8-4.5-2.2M24 15v3M24 31.5v3' fill='none' stroke='%231ea574' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
+<link rel="icon" type="image/svg+xml" href="assets/sav3r-logo.svg">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="152x152" href="icons/apple-touch-icon-152.png">
+<link rel="apple-touch-icon" sizes="167x167" href="icons/apple-touch-icon-167.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
 <script>
 /* Set the theme before first paint so there is no flash. */
 (function () {
@@ -33,12 +38,34 @@
 <!-- ================= HARD-CODED ICON SPRITE (no fonts, no network, no device rendering needed) ================= -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
   <defs>
-    <symbol id="i-logo" viewBox="0 0 48 48">
-      <rect width="48" height="48" rx="14" fill="#2fc48d"/>
-      <circle cx="24" cy="25" r="13" fill="#ffffff"/>
-      <path d="M28 20c-1-1.4-2.4-2-4.1-2-2.3 0-3.9 1.2-3.9 3 0 4.4 8 2.1 8 6.4 0 1.8-1.8 3.1-4.2 3.1-1.9 0-3.5-.8-4.5-2.2M24 15v3M24 31.5v3" fill="none" stroke="#1ea574" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M35 8c3 0 5 2 5 5-3 0-5-2-5-5z" fill="#bff0d9"/>
-    </symbol>
+    <symbol id="i-logo" viewBox="0 0 512 512"><defs>
+    <linearGradient id="hbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7bf0c0"/>
+      <stop offset="0.55" stop-color="#2fc48d"/>
+      <stop offset="1" stop-color="#14996a"/>
+    </linearGradient>
+    <radialGradient id="hhi" cx="0.22" cy="0.12" r="0.75">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hcoin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e3f8ee"/>
+    </linearGradient>
+  </defs><rect width="512" height="512" rx="116" fill="url(#hbg)"/><rect width="512" height="512" rx="116" fill="url(#hhi)"/>
+  <g>
+    <circle cx="256" cy="310" r="166" fill="#0b5a3c" opacity="0.07"/>
+    <circle cx="256" cy="305" r="160" fill="#0b5a3c" opacity="0.10"/>
+    <circle cx="256" cy="301" r="156" fill="#0b5a3c" opacity="0.16"/>
+    <circle cx="256" cy="296" r="156" fill="url(#hcoin)"/>
+    <path d="M256 296 L256.00 172.00 A124 124 0 0 1 256.00 420.00 Z" fill="#118a5e" stroke="#ffffff" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M256 296 L256.00 420.00 A124 124 0 0 1 138.07 257.68 Z" fill="#2fc48d" stroke="#ffffff" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M256 296 L138.07 257.68 A124 124 0 0 1 256.00 172.00 Z" fill="#a6ecc9" stroke="#ffffff" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M256 140 L256 108" stroke="#ffffff" stroke-width="14" stroke-linecap="round" fill="none"/>
+    <path d="M258 116 C258 72 296 44 346 50 C346 98 308 128 258 116 Z" fill="#ffffff" stroke="#ffffff" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M254 124 C254 92 230 72 192 74 C192 110 218 132 254 124 Z" fill="#e4fbef" stroke="#e4fbef" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M266 108 C290 92 312 78 334 64" stroke="#2fc48d" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.8"/>
+  </g></symbol>
 
     <symbol id="i-home" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></g></symbol>
     <symbol id="i-target" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></g></symbol>
@@ -78,7 +105,7 @@
 <header class="top">
   <div class="top-inner">
     <div class="brand">
-      <svg class="logo" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><use href="#i-logo" xlink:href="#i-logo"></use></svg>
+      <svg class="logo" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#i-logo" xlink:href="#i-logo"></use></svg>
       <span class="brand-name">SAV<span>3</span>R</span>
     </div>
     <button type="button" class="icon-btn theme-btn" data-action="toggle-theme" aria-label="Switch between light and dark theme" title="Switch theme">
